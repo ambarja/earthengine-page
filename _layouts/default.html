@@ -13,9 +13,11 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
   <link rel="icon"
     href="https://raw.githubusercontent.com/ambarja/earthengine-page/gh-pages/images/earth-engine-logo.ico">
+  <title>Examples</title>
 </head>
 
 <body>
+  <!-- navbar -->
   <nav class="blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
       <span id="logo-container" class="sanspro">
@@ -48,7 +50,7 @@
 
     </div>
   </div>
-
+  <!-- container navbar -->
   <div class="container center">
     <div class="row">
       <form class="col s12">
@@ -132,17 +134,25 @@
               target="_blank" style="display: block;"></a></span>
           {% endif %}
           <p class="widget-shortdesc">{{ widget.short | markdownify | remove: '
-          <p>' | remove: '</p>' }}</p>
+          <p>' | remove: '</p>' }}
+          </p>
           <p class="widget-list-item"><i class="material-icons meta-bullet red-text">stop</i><span
               class="red-text">author:</span> <span class="widget-author widget-meta"><a
-                href="https://github.com/{{ widget.ghauthor }}">{{ widget.ghauthor }}</a></span></p>
+                href="https://github.com/{{ widget.ghauthor }}">{{ widget.ghauthor }}</a></span>
+          </p>
           <p class="widget-list-item"><i class="material-icons meta-bullet green-text">stop</i><span
               class="green-text">tags:</span> <span class="widget-tags widget-meta">{{ widget.tags }}</span></p>
-          <p class="widget-list-item"><i class="material-icons meta-bullet blue-text">stop</i><span class="blue-text">js
-              libraries:</span> <span class="widget-jslibs widget-meta">{{ widget.jslibs | markdownify | remove: '<p>' |
-                remove: '</p>' }}</span></p>
-          <!-- <div class="more-icon activator"><i class="material-icons right">more_vert</i></div> -->
           <div class="hidden widget-cran">{{ widget.cran }}</div>
+          <div>
+            <p class="widget-list-item" class="material-icons meta-bullet blue-text">
+              <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="">
+              <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"
+                alt="">
+              <img
+                src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1Ee"
+                alt="">
+            </p>
+          </div>
         </div>
         <div class="card-reveal" style="display: none; -webkit-transform: translateY(0px);">
           <span class="card-title grey-text text-darken-4">{{ widget.name }}<i
@@ -153,7 +163,7 @@
       {% endfor %}
     </div>
   </div>
-
+  <!-- footer -->
   <footer class="page-footer light-blue">
     <div class="footer-copyright">
       <div class="container">
